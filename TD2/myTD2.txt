@@ -1,0 +1,18 @@
+Site source: http://finalysis.fr/news.php?numnews=22 
+ http://finalysis.fr/actu/news/img/sucre_conso_per_capita.jpg
+
+Graphe de la consommation de sucre en kg/personne pour 5 pays et lUE sur 5 années différentes de 1978 à 2014.
+
++
+Compréhension simple avec seulement le titre et les noms des pays.
+Couleurs bien légendées.
+Légende et axes claires.
+Date de larticle présente : 25 janvier 2016.
+Commence à 0.
+
+-
+Aucune information supplémentaire sur le site :
+pas de source pour les données (étude de ??)
+date de larticle ?=? date de lhistogramme ?
+A quoi correspond le premier  pays  : ww ?
+
