@@ -1,0 +1,74 @@
+---
+  title: "TD3"
+author: "Amandine TIGNONE"
+date: "January 2017"
+output:
+  word_document: default
+pdf_document:
+  number_sections: yes
+html_document: default
+subtitle: A RStudio Demonstration and Statistical Analysis Draft
+geometry: margin=1.5in, top=0.5in, bottom=0.5in
+---
+
+# Introduction
+
+## Read data
+
+Nous avons utilisé le jeux de données : PP_size_3.csv pour obtenir les résultats suivants.
+
+```{r}
+df <- read.csv("PP_size_3.csv", header=TRUE, col.names=c("time"))
+head(df);
+```
+
+
+## Overview of all the measurements
+
+```{r, fig.width=8, fig.height=7}
+plot(df$time, ylab="Time (seconds)", xlab="Measurement Number");
+```
+
+On observe une grande densité de données regroupée 
+
+
+## Statistical Summary
+
+
+```{r}
+summary(df$time);
+```
+
+
+## Boxplot
+
+```{r, fig.width=2, fig.height=7}
+boxplot(df$time, ylab="Time (seconds)")
+```
+
+
+## Histogram
+
+```{r, fig.width=7}
+hist(df$time, breaks=7, xlab="Time (seconds)", main="Histogram of Ping-Pong")
+```
+
+
+## Variability
+
+```{r}
+sd(df$time)
+```
+
+
+## Wrap up
+
+```{r}
+mean(df$time)
+sd(df$time)
+```
+
+
+
+
+

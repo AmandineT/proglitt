@@ -1,0 +1,62 @@
+---
+title: "The Grammar of Graphics (of ggplot2)"
+author: "Amandine TIGNONE"
+date: "February 14, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+# Mon TD4 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Creation d'un plot vide
+
+```{r}
+library(ggplot2);
+ggplot();
+```
+
+Load fichier
+```{r}
+fich_lynx <- read.csv('data/lynx.csv');
+```
+
+Affiche les données du fichier lu
+
+```{r}
+fich_lynx
+```
+
+
+Plot sur les données de lynx
+
+```{r}
+ggplot(data=fich_lynx, aes(x=time, y=lynx)) + geom_point() + geom_line() +
+xlab("Année") + ylab("Nombre de lynx") ;
+```
+
+On peut voir que ce n'est peut-être pas le diagramme le plus adapté pour visualiser ces données.
+
+```{r}
+ggplot(data=fich_lynx, aes(x=time, y=lynx, size=lynx, color=lynx)) + 
+  geom_point() +
+  xlab("Année") + ylab("Population de lynx") ;
+```
+On visualise bien les informations puisque les données intéressantes sont rangées sur l'axe des ordonnées mais on a aussi une gradation de taille et de couleurs en fonction du nombre de lynx par année. 
+Mais est-ce nécessaire d'avoir autant d'information ? (légende "surchargée")
+
+
+```{r}
+ggplot(data=fich_lynx) +
+  geom_histogram(aes(x=lynx));
+```
+Un histogramme donne un nombre d'occurences, pour ces informations ce n'est pas intéressant.
+
+
+
+
+

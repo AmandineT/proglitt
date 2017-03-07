@@ -1,0 +1,44 @@
+---
+title: "myTD5"
+author: "Amandine"
+date: "28 fevrier 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+df <- read_tsv("dpt2015.txt", locale = locale(encoding = "ISO-8859-1"));
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+df %>% filter(tolower(preusuel) == tolower("Amandine") & annais == 1995 & dpt == 69);
+```
+
+```{r}
+df %>% filter(tolower(preusuel) == tolower("Etienne") & annais == 1994 & dpt == 34);
+```
+
+```{r}
+df %>% filter(tolower(preusuel) == tolower("Etienne") & annais == 1994) %>% summarize(somme = sum(nombre));
+```
+
+```{r}
+df %>% filter(tolower(preusuel) == tolower("Amandine") & annais == 1995) %>% summarize(somme = sum(nombre));
+```
+
+
+
+
+
+
+
